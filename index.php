@@ -3,6 +3,7 @@ session_start();
 
 include_once("config.php");
 
+include('includes/footer.php');
 $message = "";
 
 if (isset($_POST['login'])) {
