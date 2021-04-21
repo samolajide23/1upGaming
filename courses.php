@@ -87,28 +87,15 @@ and open the template in the editor.
 
 
              <section>
-                 <!-- display a table of records -->
-                 <h1 class="title"><?php echo $category_name; ?></h1>
-                 <table>
-                     <tr>
-                         <th>Course Code</th>
-                         <th>Category</th>
-                         <th>Course Name</th>
-                         <th>Level</th>
-                         <th>Years</th>
-
-                     </tr>
-                     <?php foreach ($records as $record) : ?>
-                         <tr>
-                             <td><?php echo $record['courseCode']; ?></td>
-                             <td class="right"><?php echo $category_name; ?></td>
-                             <td class="right"><?php echo $record['courseName']; ?></td>
-                             <td class="right"><?php echo $record['level']; ?></td>
-                             <td class="right"><?php echo $record['years']; ?></td>
-                         </tr>
-                     <?php endforeach; ?>
-                 </table>
-                 <p></p>
+                 <!-- display a table of games -->
+                 <?php foreach ($games as $games) : ?>
+                     <div id=<?php echo $games['referenceTitle']; ?> class="gameClick" onclick="saveGameTitle(this.id)">
+                         <a href="gamePage.php">
+                             <img src="image_uploads/<?php echo $games['referenceTitle']; ?>.jpg" alt=<?php echo $games['title']; ?>>
+                             <p> <?php echo $games['title']; ?> </p>
+                         </a>
+                     </div>
+                 <?php endforeach; ?>
              </section>
          </div>
          <script src="main.js"></script>
