@@ -2,11 +2,11 @@
 
 #container {
     position: relative;
-    margin: 5% auto;
+    margin: 8% auto;
     height: 400px;
     width: 650px;
-    background: $white;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background: $text;
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.159), 0px 0px 50px rgba(255, 255, 255, 0.309);
     border-style: solid;
     border-width: 1px;
     border-color: black;
@@ -24,17 +24,15 @@
         width: 325px;
         height: 400px;
     }
-
     .rightBox {
         position: absolute;
         top: 0;
         right: 0;
-        border-left: 1px solid $white;
+        border-left: 1px solid $text;
         padding: 40px;
         width: 325px;
         height: 400px;
     }
-
     input[type="text"],
     input[type="email"],
     input[type="password"] {
@@ -50,7 +48,6 @@
         font-size: 15px;
         transition: 0.2s ease;
     }
-
     input[type="submit"] {
         display: block;
         margin-bottom: 28px;
@@ -60,14 +57,13 @@
         border: none;
         background: $mainColor;
         border-radius: 2px;
-        color: white;
+        color: $text;
         font-family: sans-serif;
         font-weight: 500;
         text-transform: uppercase;
         transition: 0.2s ease;
         cursor: pointer;
     }
-
     input[type="submit"]:hover,
     input[type="submit"]:focus {
         background: $hoverColor;
@@ -78,8 +74,8 @@
 button.ghost {
     border-radius: 20px;
     background: transparent;
-    border-color: $white;
-    color: white;
+    border-color: $text;
+    color: $text;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
@@ -96,10 +92,9 @@ button.ghost {
     transition: transform 0.6s ease-in-out;
     border-radius: 2px;
     z-index: 10;
-
     .overlay {
         background: $mainColor;
-        background: linear-gradient(to right, rgb(72, 203, 247), $mainColor) no-repeat 0 0 / cover;
+        background: linear-gradient(to right, $gradientColor, $mainColor) no-repeat 0 0 / cover;
         color: #fff;
         position: relative;
         left: -100%;
@@ -131,7 +126,6 @@ button.ghost {
             right: 0;
             transform: translateX(0);
         }
-
         .overlay-left {
             left: 0;
             transform: translateX(-20%);
@@ -139,7 +133,9 @@ button.ghost {
     }
 }
 
+
 /* Animation */
+
 .container.right-panel-active {
     .sign-in-container {
         transform: translateX(100%);
@@ -190,8 +186,10 @@ button.ghost {
         left: 0;
     }
 }
+
 .form-control.error {
-    i.fa-exclamation,small {
+    i.fa-exclamation,
+    small {
         visibility: visible;
         color: #e74c3c;
     }

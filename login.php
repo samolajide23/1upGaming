@@ -7,7 +7,7 @@ $message = "";
 
 if (isset($_POST['login'])) {
 
-    $con = config::connect();
+    $con = config::connect() ;;
 
     if (empty($_POST["loginUsername"]) || empty($_POST["loginPassword"])) {
         echo '<label class="text-danger"><p>All fields are required </p></label>';
@@ -25,11 +25,7 @@ if (isset($_POST['login'])) {
 
         if ($count > 0) {
             $_SESSION["loginUsername"] = $_POST["loginPassword"];
-            if ($_POST["loginUsername"] == "admin" && $_POST["loginPassword"] == "admin") {
-                header("location: adminCourses.php");
-            } else {
-                header("location: courses.php");
-            }
+            header("location: index.php");
         } else {
             echo '<label class="text-danger"><p> Invalid username/Password</p></label>';
         }
@@ -144,8 +140,6 @@ and open the template in the editor.
             </div>
         </div>
     </div>
-    <script src="main.js"></script>
-    <script src="validation.js"></script>
 </body>
 
 </html>

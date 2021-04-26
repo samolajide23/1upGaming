@@ -17,8 +17,6 @@ if (isset($_GET['logout'])) {
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
     
     <link rel="shortcut icon" href="images/animeFavicon.png" type="image/x-icon">
-    <script src="JS/script.js"></script>
-    <script src="JS/validation.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
 </head>
@@ -29,10 +27,10 @@ if (isset($_GET['logout'])) {
     <header>
            <div class="nav-container">
                <nav class="navbar">
-                   <h1 id="navbar-logo">CAO DATABASE</h1>
+                   <h1 id="navbar-logo"><a href="index.php">1up Gaming</a></h1>
                    
                    <ul class="nav-menu">
-                       <li><a href="contact-form.html">Contact</a><li>
+                       <li><a href="contact-form.php">Contact</a><li>
                        <li><a href="index.php" class="nav-links nav-links-btn">Sign Out</a></li>
 
                    </ul>

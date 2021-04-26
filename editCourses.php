@@ -5,12 +5,12 @@ require("config.php");
 $con = config::connect();
 $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
 $query = 'SELECT *
-          FROM records
+          FROM games
           WHERE recordID = :record_id';
 $statement = $con->prepare($query);
 $statement->bindValue(':record_id', $record_id);
 $statement->execute();
-$records = $statement->fetch(PDO::FETCH_ASSOC);
+$games = $statement->fetch(PDO::FETCH_ASSOC);
 $statement->closeCursor();
 
 if (isset($_POST['submit'])) {
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
        $con = config::connect();
 
        // Add the product to the database 
-       $query = 'UPDATE records
+       $query = 'UPDATE games
 
            SET
            courseName = :courseName,
@@ -60,22 +60,22 @@ if (isset($_POST['submit'])) {
        <h1>Edit Product</h1>
        <form method="post" enctype="multipart/form-data" id="add_record_form">
 
-              <input type="hidden" name="recordId" value="<?php echo $records['recordID']; ?>">
+              <input type="hidden" name="recordId" value="<?php echo $games['recordID']; ?>">
 
               <label>Course Name:</label>
-              <input required type="input" name="courseName" value="<?php echo $records['courseName']; ?>">
+              <input required type="input" name="courseName" value="<?php echo $games['courseName']; ?>">
               <br>
 
               <label>Course Code:</label>
-              <input required type="input" name="courseCode" value="<?php echo $records['courseCode']; ?>">
+              <input required type="input" name="courseCode" value="<?php echo $games['courseCode']; ?>">
               <br>
 
               <label>Level:  (6 - 8)</label>
-              <input required type="number" min="6" max="8" name="level" value="<?php echo $records['level']; ?>">
+              <input required type="number" min="6" max="8" name="level" value="<?php echo $games['level']; ?>">
               <br>
 
               <label>years:  (1 - 5)</label>
-              <input required type="number" min="1" max="5" name="years" value="<?php echo $records['years']; ?>">
+              <input required type="number" min="1" max="5" name="years" value="<?php echo $games['years']; ?>">
               <br>
 
               <label>&nbsp;</label>

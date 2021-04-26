@@ -1,0 +1,22 @@
+.gameContainer {
+    position: absolute;
+    top: -10em;
+    width: 90%;
+    left: 15%;
+    color: black;
+    img {
+        box-shadow: 1px 1px 5px #ccc;
+    }
+    a {
+        float: left;
+        position: relative;
+        padding: 9px 8px 9px 16px;
+        width: 20%;
+        height: 30%;
+        text-decoration: none;
+        text-align: center;
+        color: $text;
+        font-size: 20px;
+        display: block;
+    }
+}

@@ -1,6 +1,26 @@
 <?php 
+
+if (isset($_POST['submitContactForm'])){
+	$name = $_POST['contactFormName'];
+	$subject = $_POST['contactFormSubject'];
+	$mailFrom = $_POST['contactFormMail'];
+	$message = $_POST['contactFormMessage'];
+
+	$mailTo = "d00231093@student.dkit.ie";
+	$headers = "From: ".$mailFrom;
+	$txt = "You have recieved a game request from ".$name. ".\n\n".$message;
+
+	mail($mailTo,$subject,$txt,$headers);
+	header('Location: contact.php?mailsend');
+}
+
+
+
+
+
+
 $errors = '';
-$myemail = 'D00231093@student.dkit.ie';//<-----Put your DkIT email address here.
+$myemail = 'd00231093@student.dkit.ie';//<-----Put your DkIT email address here.
 if(empty($_POST['name'])  || 
    empty($_POST['email']) || 
    empty($_POST['message']))
@@ -9,7 +29,7 @@ if(empty($_POST['name'])  ||
 }
 
 $name = $_POST['name']; 
-$email_address = $_POST['email']; 
+$email_address = $_POST['mail']; 
 $message = $_POST['message']; 
 
 if (!preg_match(
@@ -43,9 +63,10 @@ if( empty($errors))
 <body>
 <!-- This page is displayed only if there is some error -->
 <?php
+ include('includes/header.php');
+ include('includes/footer.php');
 echo nl2br($errors);
 ?>
-
 
 </body>
 </html>

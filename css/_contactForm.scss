@@ -1,0 +1,20 @@
+#contact-form-container {
+    top: 20%;
+    position: absolute;
+    text-align: center;
+    left: 15%;
+    width: 70%;
+    color: $text;
+    background-color: $mainColor;
+    .contact-form {
+        label {
+            padding: 5%;
+        }
+        color: $text;
+        input[name="name"],
+        input[name="mail"] {
+            width: 30%;
+            float: right;
+        }
+    }
+}

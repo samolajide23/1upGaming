@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background: black;
+  color: white;
 }
 
 .courseFormContainer {
@@ -39,7 +40,7 @@ body {
 .courseFormContainer input[type="submit"],
 .courseFormContainer input[type="button"] {
   font-family: "Montserrat", sans-serif;
-  background-color: red;
+  background-color: green;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -54,7 +55,7 @@ body {
 
 .courseFormContainer input[type="submit"]:hover,
 .courseFormContainer input[type="button"]:hover {
-  background-color: rgba(17, 17, 255, 0.897);
+  background-color: #d17777;
 }
 
 /* Here is where fonts styles start */
@@ -79,17 +80,17 @@ h2 {
 /* Here is where header styles start */
 .nav-container {
   width: 100%;
-  background-color: red;
+  background-color: green;
 }
 
 .nav-container .navbar {
-  height: 80px;
+  height: 3.5em;
   width: 100%;
 }
 
 .nav-container .navbar #navbar-logo {
   position: absolute;
-  top: 0.6em;
+  top: 0.2em;
   color: white;
   left: 2em;
   cursor: pointer;
@@ -116,8 +117,9 @@ h2 {
   position: absolute;
   display: block;
   list-style: none;
+  float: right;
   right: 2em;
-  top: 1em;
+  top: 0.5em;
 }
 
 .nav-container .navbar a {
@@ -129,12 +131,12 @@ h2 {
 /* This is where the login css starts*/
 #container {
   position: relative;
-  margin: 5% auto;
+  margin: 8% auto;
   height: 400px;
   width: 650px;
   background: white;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.159), 0px 0px 50px rgba(255, 255, 255, 0.309);
+          box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.159), 0px 0px 50px rgba(255, 255, 255, 0.309);
   border-style: solid;
   border-width: 1px;
   border-color: black;
@@ -190,7 +192,7 @@ h2 {
   width: 120px;
   height: 32px;
   border: none;
-  background: red;
+  background: green;
   border-radius: 2px;
   color: white;
   font-family: sans-serif;
@@ -203,7 +205,7 @@ h2 {
 
 #container input[type="submit"]:hover,
 #container input[type="submit"]:focus {
-  background: rgba(17, 17, 255, 0.897);
+  background: #d17777;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -235,9 +237,9 @@ button.ghost {
 }
 
 .overlay-container .overlay {
-  background: red;
-  background: -webkit-gradient(linear, left top, right top, from(#48cbf7), to(red)) no-repeat 0 0/cover;
-  background: linear-gradient(to right, #48cbf7, red) no-repeat 0 0/cover;
+  background: green;
+  background: -webkit-gradient(linear, left top, right top, from(#0130ff), to(green)) no-repeat 0 0/cover;
+  background: linear-gradient(to right, #0130ff, green) no-repeat 0 0/cover;
   color: #fff;
   position: relative;
   left: -100%;
@@ -361,80 +363,165 @@ button.ghost {
   left: 0;
 }
 
-.form-control.error i.fa-exclamation, .form-control.error small {
+.form-control.error i.fa-exclamation,
+.form-control.error small {
   visibility: visible;
   color: #e74c3c;
 }
 
-.courseContainer {
+#gameContainer {
   position: absolute;
-  top: 6em;
-  width: 70%;
+  height: 80%;
+  left: 10%;
+  width: 75%;
+  top: 15%;
+}
+
+#gameContainer iframe {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#messageContainer {
+  top: 100%;
+  position: absolute;
+  left: 9%;
+  width: 67%;
+}
+
+#messageContainer .commentForm {
+  color: white;
+  left: 10%;
+  width: 100%;
+}
+
+#messageContainer .commentForm textarea {
+  width: 100%;
+  height: 2%;
+  background-color: white;
+  resize: none;
+}
+
+#messageContainer .commentForm button {
+  width: 100px;
+  height: 30px;
+  background-color: #282828;
+  border: none;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.commentBox {
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 4px;
+  background-color: #fffbfb;
+  color: black;
+}
+
+.commentBox p {
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 16px;
+}
+
+.gameContainer {
+  position: absolute;
+  top: -10em;
+  width: 90%;
   left: 15%;
   color: black;
-  position: relative;
 }
 
-.courseContainer section table {
-  position: relative;
-  font-family: arial, sans-serif;
-  left: 0%;
-  border-collapse: collapse;
-  width: 100%;
-  border-spacing: 0;
-  background: white;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  border-radius: 2px;
-  border-style: solid;
-  border-width: 1px;
-  text-align: center;
+.gameContainer img {
+  -webkit-box-shadow: 1px 1px 5px #ccc;
+          box-shadow: 1px 1px 5px #ccc;
 }
 
-.courseContainer section table td, .courseContainer section table th {
-  padding: 12px 15px;
-}
-
-.courseContainer section table th {
-  background: blue;
-  color: white;
-  text-transform: uppercase;
-}
-
-.courseContainer section table tr:nth-child(odd) {
-  background-color: #eeeeee;
-}
-
-.courseContainer section .addButton {
-  position: absolute;
-  bottom: -4em;
-  left: 87%;
-  width: 13%;
-  display: block;
-  text-align: center;
-}
-
-.courseContainer section .addButton a {
+.gameContainer a {
+  float: left;
   position: relative;
   padding: 9px 8px 9px 16px;
+  width: 20%;
+  height: 30%;
   text-decoration: none;
   text-align: center;
   color: white;
   font-size: 20px;
   display: block;
-  background-color: rgba(0, 0, 255, 0.87);
 }
 
-.courseContainer a:hover {
-  background-color: blue;
+#contact-form-container {
+  top: 20%;
+  position: absolute;
+  text-align: center;
+  left: 15%;
+  width: 70%;
+  color: white;
+  background-color: green;
+}
+
+#contact-form-container .contact-form {
+  color: white;
+}
+
+#contact-form-container .contact-form label {
+  padding: 5%;
+}
+
+#contact-form-container .contact-form input[name="name"],
+#contact-form-container .contact-form input[name="mail"] {
+  width: 30%;
+  float: right;
 }
 
 footer {
-  background-color: red;
   position: absolute;
-  height: 6em;
+  bottom: 0em;
+  height: 4.5em;
   width: 100%;
-  text-align: center;
-  border: 0.1em solid green;
+  color: white;
+  /* Button used to open the contact form - fixed at the bottom of the page */
+}
+
+footer .open-button {
+  background-color: green;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 1em;
+  right: 2%;
+  width: 280px;
+}
+
+footer .chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  color: black;
+  border: 3px solid;
+  z-index: 9;
+}
+
+footer .formContainer {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+footer .formContainer .btn:hover,
+footer .open-button:hover {
+  opacity: 1;
+  background-color: green;
 }
 /*# sourceMappingURL=mystyle.css.map */

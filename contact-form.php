@@ -1,52 +1,19 @@
 <?php
- include('includes/footer.php');
+include('includes/header.php');
+include('includes/footer.php');
 ?>
-    <!DOCTYPE HTML>
-
-    <head>
-        <title>Contact us</title>
-        <!-- define some style elements-->
-        <style>
-            h1 {
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 16px;
-                font-weight: bold;
-            }
-            
-            label,
-            a {
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 12px;
-            }
-        </style>
-        <!-- a helper script for validating the form-->
-        <script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
-    </head>
-    </head>
-
-    <body>
-        <h1>Contact us</h1>
-        <form method="POST" name="contactform" action="contact-form-handler.php">
-            <p>
-                <label for='name'>Your Name:</label> <br>
-                <input type="text" name="name">
-            </p>
-            <p>
-                <label for='email'>Email Address:</label> <br>
-                <input type="text" name="email"> <br>
-            </p>
-            <p>
-                <label for='message'>Message:</label> <br>
-                <textarea name="message"></textarea>
-            </p>
-            <input type="submit" value="Submit"><br>
+<body>
+    <div id="contact-form-container">
+        <h1>Submit Game Request</h1>
+        <form class="contact-form" action="contact-form-handler.php" method="post">
+            <label for="quickMessage"><strong>First name</strong></label>
+            <input type="text" name="name" placeholder="Full Name">
+            <label for="quickMessage"><strong>First name</strong></label>
+            <input type="text" name="mail" placeholder="Your email">
+            <label for="quickMessage"><strong>First name</strong></label>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submitContactForm" name="submit">SEND</button>
         </form>
-
-        <script language="JavaScript">
-            var frmvalidator = new Validator("contactform");
-            frmvalidator.addValidation("name", "req", "Please provide your name");
-            frmvalidator.addValidation("email", "req", "Please provide your email");
-            frmvalidator.addValidation("email", "email", "Please enter a valid email address");
-        </script>
-
-    </body>
+    </div>
+</body>

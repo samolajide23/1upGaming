@@ -90,3 +90,10 @@ INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (1, 'Computing'),
 (2, 'Business'),
 (3, 'Science');
+
+CREATE TABLE comments (
+    commentID int(11) not null AUTO_INCREMENT PRIMARY KEY,
+    userID varchar(128) not null,
+    date datetime not null,
+    message TEXT not null
+    );
